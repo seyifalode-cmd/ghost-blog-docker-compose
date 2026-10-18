@@ -1,4 +1,6 @@
-**Ghost Blog on AWS — Containerized CMS Deployment with Terraform and Docker Compose**
+# Ghost Blog on AWS — Containerized CMS Deployment with Terraform and Docker Compose
+
+Oluwaseyi Michael Falode | Cloud & DevOps Engineering | Toronto, ON
 
 Deploy a production-ready Ghost blogging platform on AWS EC2 using Terraform for infrastructure provisioning and Docker Compose for container orchestration, with a persistent MySQL backend.
 
@@ -145,6 +147,7 @@ docker-compose --version
 
 ```bash
 cd /path/to/docker/
+cp .env.example .env      # then edit .env and set MYSQL_ROOT_PASSWORD
 docker-compose up -d
 ```
 

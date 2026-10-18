@@ -9,7 +9,7 @@ services:
       database__client: mysql
       database__connection__host: mysql
       database__connection__user: root
-      database__connection__password: YUCloudOps20XY!
+      database__connection__password: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD in docker/.env}
       database__connection__database: ghost
     volumes:
       - ghost-volume:/var/lib/ghost
@@ -20,7 +20,7 @@ services:
     container_name: ghost-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: YUCloudOps20XY!
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD in docker/.env}
     volumes:
       - mysql-volume:/var/lib/mysql
 volumes:
